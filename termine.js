@@ -18,7 +18,7 @@ window.TERMINE=[
     ort: "Grafing - ENERGETIKA Gesundheitsmesse", 
     art: "live", 
     kategorie: "pb", 
-    link: "https://energetika.de/grafing/#vortragsprogramm"
+    link: ""
   },
 {
     titel: "Dynamische Atemreise – Körper- & Bewusstseinsarbeit", 
@@ -28,6 +28,6 @@ window.TERMINE=[
     ort: "JOYOGA in 84424 Isen", 
     art: "live", 
     kategorie: "pb", 
-    link: ""
+    link: "https://www.eventbrite.de/e/dynamische-atemreise-wissenschaft-trifft-auf-bewusstsein-tickets-2001777626768"
   },
 ];
