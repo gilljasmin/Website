@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jasmin Gill · Breathwork & PSYCHEDELIC BREATH®</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,7 +34,7 @@
   <div class="grid">
     <a class="card light" href="#"><h3 data-i="c1t">Natürlich &amp; frei atmen</h3><p data-i="c1p">Zurück zu deinem gesunden &amp; natürlichen Atemfluss.</p></a>
     <a class="card light" href="#"><h3 data-i="c2t">Ruhe finden</h3><p data-i="c2p">Mehr Entspannung und Ruhe für deinen Alltag.</p></a>
-    <a class="card light" href="#"><h3 data-i="c3t">Besser schlafen</h3><p data-i="c3p">Atemroutinen, die dich am Abend zur Ruhe kommen lassen.</p></a>
+    <a class="card light" href="#"><h3 data-i="c3t">Schlaf unterstützen</h3><p data-i="c3p">Atemroutinen, die dich am Abend zur Ruhe kommen lassen.</p></a>
     <a class="card light" href="#"><h3 data-i="c4t">Emotionale Balance</h3><p data-i="c4p">Deine Gefühle wahrnehmen, fühlen und loslassen.</p></a>
     <a class="card light" href="#"><h3 data-i="c5t">Fokus &amp; Konzentration</h3><p data-i="c5p">Klarer Kopf für Dich, deine Arbeit und den Alltag.</p></a>
     <a class="card light" href="#"><h3 data-i="c6t">Mehr Energie &amp; Leistung</h3><p data-i="c6p">Aktivierende Atmung für mehr Vitalität und Energie im Alltag.</p></a>
@@ -45,7 +44,7 @@
 <div class="white" id="pb"><section>
   <div class="eyebrow" data-i="p0">Mein Signature-Format</div>
   <h2>PSYCHEDELIC BREATH<sup style="font-size:.5em">®</sup></h2>
-  <p class="lead" data-i="p1">Dein dynamisches, intensives &amp; transformierendes Atemerlebnis – nur durch die Kraft Deines natürlichen Atems. Ohne Substanzen ganz besondere Körper- &amp; Bewusstseinszustände erleben. Erfahre tiefere Einblicke in die Neurowissenschaft. Atme kraftvoll &amp; rhythmisch. Halte den Atem kurz an. Lass dich von mir führen, von der Musik tragen &amp; den Impulsen inspirieren.</p>
+  <p class="lead" data-i="p1">Drück den Reset-Knopf. Lerne. Erlebe. Verstehe. Und öffne einen Raum, wo Veränderung möglich wird – nur mit der Kraft deines natürlichen Atems. Deine transformative Atemreise mit geführter, dynamischer Atmung und Atemanhalten, aus alten tibetischen Traditionen. Getragen von Musik, inspirierenden Impulsen und neurowissenschaftlichem Wissen.</p>
   <div class="grid">
     <a class="card" href="psychedelic-breath.html"><h3 data-i="p2t">In-Person Klassen</h3><p data-i="p2p">Gemeinsam atmen, offene Gruppe, live vor Ort.</p><small data-i="p2s">Termine ansehen →</small></a>
     <a class="card" href="psychedelic-breath.html"><h3 data-i="p3t">Online Klassen</h3><p data-i="p3p">Von zu Hause, mit der Gruppe verbunden.</p><small data-i="p3s">Termine ansehen →</small></a>
@@ -88,14 +87,16 @@
   <div class="eyebrow" data-i="k0">Kontakt</div>
   <h2 data-i="k0b">Schreib mir</h2>
   <p class="lead" data-i="k1">Wie kann ich dir helfen? Fragen, Anfragen oder Anmeldung? Schreib mir hier.</p>
-  <!-- Formular-Dienst: ersetze DEINE-FORM-ID (siehe Anleitung im Chat) -->
-  <form class="kontakt" action="https://formspree.io/f/DEINE-FORM-ID" method="POST">
+  <form class="kontakt" action="https://formspree.io/f/mwlpdydz" method="POST">
+    <input type="hidden" name="_subject" value="Anfrage über die Webseite">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
     <input name="name" required data-ph="Dein Name" data-ph-en="Your name" placeholder="Dein Name">
     <input name="email" type="email" required data-ph="Deine E-Mail" data-ph-en="Your email" placeholder="Deine E-Mail">
     <input name="phone" type="tel" data-ph="Telefonnummer (optional)" data-ph-en="Phone number (optional)" placeholder="Telefonnummer (optional)">
     <textarea id="msg" name="message" rows="5" required data-ph="Deine Nachricht" data-ph-en="Your message" placeholder="Deine Nachricht"></textarea>
     <label class="consent"><input type="checkbox" name="consent" required><span data-i="k5">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden.</span></label>
     <button class="btn" type="submit" data-i="k4">Nachricht senden</button>
+    <p id="fmsg" class="fmsg" role="status"></p>
   </form>
 </section>
 
@@ -117,12 +118,12 @@ h3:"Breathe for 9 minutes now",
 b1:"Breathwork Essentials",b2:"Master your breathing! Did you know that many people have unlearned how to breathe properly? Foundational breathing techniques for you and your everyday life. Discover the power of your breath. Choose what you need right now.",
 c1t:"Natural &amp; free breathing",c1p:"Back to your healthy, natural flow of breath.",
 c2t:"Finding calm",c2p:"Find relaxation and bring more calm into your day.",
-c3t:"Sleep better",c3p:"Breathing routines that help you wind down in the evening.",
+c3t:"Support your sleep",c3p:"Breathing routines that help you wind down in the evening.",
 c4t:"Emotional balance",c4p:"Notice, feel and let go of your emotions.",
 c5t:"Focus &amp; concentration",c5p:"A clear mind for you, your work and daily life.",
 c6t:"More energy &amp; performance",c6p:"Activating breathwork for more vitality and energy in everyday life.",
 p0:"My signature format",
-p1:"Your dynamic, intense and transformative breath experience – through the power of your natural breath alone. Experience very special states of body and awareness – without any substances. Gain deeper insights into neuroscience. Breathe powerfully and rhythmically. Briefly hold your breath. Let me guide you, be carried by the music and inspired by the impulses.",
+p1:"Hit the reset button. Learn. Experience. Understand. And open a space where change becomes possible – with nothing but the power of your natural breath. Your transformative breath journey with guided, dynamic breathing and breath holds, from ancient Tibetan traditions. Carried by music, inspiring impulses and neuroscientific knowledge.",
 p2t:"In-person classes",p2p:"Breathe together, open group, live on site.",p2s:"See dates →",
 p3t:"Online classes",p3p:"From home, connected to the group.",p3s:"See dates →",
 p4t:"Private sessions",p4p:"Tailored to you, or exclusively for your private small group. Live or online.",p4s:"Enquire →",
@@ -135,7 +136,7 @@ a0:"Breath practice · Join in",a1:"Your breathing break",a2:"Sit comfortably, c
 l0:"Later: <strong>For you</strong> – Individuals · Companies · The horse world · Partners",
 f1:"Sign up &amp; info (Eventbrite)",f2:"Legal notice · Privacy",
 k0b:"Write to me",n6:"Dates",t0:"Dates",t1:"Upcoming events",t2:"Book directly via Eventbrite. For dates without a booking link, please get in touch via the contact form.",
-k0:"Contact",k1:"How can I help you? Questions, enquiries or registration? Write to me here.",k4:"Send message",pm:"More about PSYCHEDELIC BREATH® →",dis:"<strong>Legal notice:</strong> My offers are intended for relaxation, well-being and personal development. They are not a substitute for medical advice, diagnosis or therapy and contain no promise of healing. If you have physical or mental health concerns, please always consult a doctor, alternative practitioner or psychotherapist. Participation is at your own responsibility.",fi:"Legal notice",fd:"Privacy policy",k5:"I have read the <a href=\"datenschutz.html\">privacy policy</a> and agree that my details may be processed to handle my enquiry."};
+k0:"Contact",k1:"How can I help you? Questions, enquiries or registration? Write to me here.",k4:"Send message",pm:"More about PSYCHEDELIC BREATH® →",dis:"<strong>Legal notice:</strong> My offers are intended for relaxation, well-being and personal development. They are not a substitute for medical advice, diagnosis or therapy and contain no promise of healing. If you have physical or mental health concerns, please always consult a doctor, alternative practitioner or psychotherapist. Participation is at your own responsibility.",fi:"Legal notice",fd:"Privacy policy",k5:"I have read the <a href=\"datenschutz.html\">privacy policy</a> and agree that my details may be processed to handle my enquiry.",kb:"Body &amp; awareness work",w00:"Experience",w0:"Your space of possibilities",x00:"Please note",x10:"If one of these health conditions applies to you, I kindly ask you not to take part. If you are unsure, please talk to me beforehand and also consult your doctor."};
 </script>
 <script src="termine.js"></script>
 <script src="app.js"></script>

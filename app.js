@@ -3,10 +3,11 @@ const els=[...document.querySelectorAll('[data-i]')];
 els.forEach(e=>e.dataset.de=e.innerHTML);
 let LANG='de';
 const T=(de,en)=>(LANG==='en'&&en)?en:de;
+const nd=s=>/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(s)?s.split('.').reverse().map((x,i)=>i?x.padStart(2,'0'):x).join('-'):s;
 function renderTermine(){
   const box=document.getElementById('termine-list'); if(!box)return;
   const f=box.dataset.filter, now=new Date().toISOString().slice(0,10);
-  const list=(window.TERMINE||[]).filter(t=>(!f||t.kategorie===f)&&t.datum>=now)
+  const list=(window.TERMINE||[]).map(t=>({...t,datum:nd(String(t.datum||'').trim())})).filter(t=>(!f||t.kategorie===f)&&t.datum>=now)
     .sort((a,b)=>(a.datum+(a.zeit||'')).localeCompare(b.datum+(b.zeit||'')));
   if(!list.length){box.innerHTML='<p class="empty">'+T('Aktuell sind keine Termine eingestellt. Schau bald wieder vorbei – oder melde dich bei mir.','No dates are scheduled right now. Check back soon – or get in touch.')+'</p>';return}
   box.innerHTML=list.map(t=>{
@@ -34,3 +35,12 @@ if(ev&&ta)ta.value='Anfrage / Enquiry: '+ev+'\n\n';
 let l=null;try{l=localStorage.getItem('lang')}catch(e){}
 if(!l)l=(navigator.language||'de').toLowerCase().startsWith('de')?'de':'en';
 setLang(l);
+
+const fm=document.querySelector('form.kontakt');
+if(fm){fm.addEventListener('submit',async e2=>{
+  e2.preventDefault();const btn=fm.querySelector('button'),msg=document.getElementById('fmsg');btn.disabled=true;
+  try{const r=await fetch(fm.action,{method:'POST',body:new FormData(fm),headers:{Accept:'application/json'}});
+    if(!r.ok)throw 0;fm.reset();msg.className='fmsg ok';
+    msg.textContent=T('Danke dir! Deine Nachricht ist angekommen, ich melde mich bei dir.','Thank you! Your message has arrived, I will get back to you.');
+  }catch(x){msg.className='fmsg err';msg.textContent=T('Das hat leider nicht geklappt. Bitte versuche es noch einmal.','Sorry, that did not work. Please try again.')}
+  btn.disabled=false})}
